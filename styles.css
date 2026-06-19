@@ -51,6 +51,17 @@ body {
   color: var(--accent-2);
   font-style: italic;
 }
+
+/* Profile photo - consistent sizing and gentle zoom/crop */
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* move focal point slightly upward to crop shoulders */
+  object-position: 50% 22%;
+  display: block;
+}
 .topspace {
   margin-top: 40px;
 }
