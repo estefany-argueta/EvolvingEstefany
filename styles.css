@@ -54,16 +54,26 @@ body {
 
 /* Profile photo - consistent sizing and gentle zoom/crop */
 .profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* move focal point slightly upward to crop shoulders */
+  object-position: 50% 18%;
+  display: block;
+  transform: scale(1.12); /* gentle zoom */
+  transition: transform 180ms ease;
+}
+
+/* wrapper to ensure perfect circular crop and border */
+.profile-wrap {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  object-fit: cover;
-  /* move focal point slightly upward to crop shoulders */
-  object-position: 50% 22%;
-  display: block;
-  border: 6px solid rgba(43,38,32,0.06); /* subtle border like original */
+  overflow: hidden;
+  display: inline-block;
+  border: 6px solid rgba(43,38,32,0.06);
   box-shadow: 0 4px 12px rgba(15,18,20,0.06);
-  background-clip: padding-box;
+  background: var(--surface);
 }
 
 
