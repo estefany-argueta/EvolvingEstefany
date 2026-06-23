@@ -941,3 +941,6 @@ details.project-details[open] summary {
     width: 20px; /* Adjust width as needed */
     height: 20px; /* Adjust height as needed */
 }
+
+/* Override any accidental ALL CAPS */
+p { text-transform: none !important; }
