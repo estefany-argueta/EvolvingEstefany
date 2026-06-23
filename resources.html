@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resources — Estefany Argueta</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="header">
+    <div id="head" class="parallax" parallax-speed="1">
+      <h3 id="logo" class="text-center">
+        <span class="title"><br><br><br>Resources</span>
+      </h3>
+    </div>
+    <nav class="navbar navbar-default navbar-sticky">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li class="active"><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="topspace">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2>Reproducible Research Resources</h2>
+          <p>This page collects starter templates, guidelines, and workflows that my lab uses to promote reproducible, well-documented science. Feel free to adapt these for your own work.</p>
+
+          <hr style="margin: 3rem 0;">
+
+          <h3>Reproducible Research Starter Kit</h3>
+          
+          <div style="background: #f6f5ef; padding: 1.5rem; border-radius: 6px; margin-bottom: 1.5rem;">
+            <h4 style="margin-top: 0;">Folder & Repository Structure</h4>
+            <p><strong>Recommended project layout:</strong></p>
+            <pre style="background: #fff; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.85rem;">project-name/
+├── README.md
+├── data/
+│   ├── raw/              # Never modify!
+│   ├── processed/        # Cleaned, annotated data
+│   └── metadata/
+├── scripts/
+│   ├── 01_data_import.R
+│   ├── 02_clean_and_explore.R
+│   └── 03_analysis.R
+├── outputs/
+│   ├── figures/
+│   ├── tables/
+│   └── models/
+├── docs/
+│   └── data_dictionary.md
+└── .gitignore</pre>
+            <p style="margin-bottom: 0;"><strong>Key principle:</strong> Raw data stays raw. Create new files for each processing step. Use numbered scripts to show the workflow.</p>
+          </div>
+
+          <div style="background: #f6f5ef; padding: 1.5rem; border-radius: 6px; margin-bottom: 1.5rem;">
+            <h4 style="margin-top: 0;">README Template</h4>
+            <p>Every project should have a README with:</p>
+            <ul style="font-size: 0.95rem;">
+              <li>Project title and brief description</li>
+              <li>Authors and affiliations</li>
+              <li>Folder structure overview</li>
+              <li>Data sources and collection methods</li>
+              <li>Instructions to reproduce analyses</li>
+              <li>Dependencies (R packages, software versions)</li>
+              <li>License information</li>
+              <li>Contact for questions</li>
+            </ul>
+            <p style="margin-bottom: 0;"><a href="#">Download README template</a> (coming soon)</p>
+          </div>
+
+          <div style="background: #f6f5ef; padding: 1.5rem; border-radius: 6px;">
+            <h4 style="margin-top: 0;">Data Organization & Naming</h4>
+            <ul style="font-size: 0.95rem; margin-bottom: 0;">
+              <li><strong>File naming:</strong> Use descriptive names with dates. Example: <code>2024-06-23_thermal_tolerance_trials.csv</code></li>
+              <li><strong>Consistency:</strong> Use consistent column names, units, and missing value codes (NA, -9999, etc.)</li>
+              <li><strong>Metadata:</strong> Always include a data dictionary explaining all columns, units, and collection protocols</li>
+              <li><strong>Version control:</strong> If data changes, create a new file (v1, v2) rather than overwriting</li>
+              <li><strong>Documentation:</strong> Record who collected the data, when, where, and under what conditions</li>
+            </ul>
+          </div>
+
+          <hr style="margin: 3rem 0;">
+
+          <h3>Git & GitHub How-Tos</h3>
+          
+          <div style="background: #f6f5ef; padding: 1.5rem; border-radius: 6px; margin-bottom: 1.5rem;">
+            <h4 style="margin-top: 0;">Branching & Workflow</h4>
+            <ul style="font-size: 0.95rem;">
+              <li><strong>Main branch:</strong> Production-ready code only. Protects published work.</li>
+              <li><strong>Develop branch:</strong> Working branch where we test new analyses.</li>
+              <li><strong>Feature branches:</strong> For experiments. Name them: <code>feature/add-thermal-plots</code> or <code>bugfix/missing-samples</code></li>
+              <li><strong>Pull requests:</strong> Always use PRs to merge back to develop/main. Require review before merging.</li>
+              <li><strong>Commit messages:</strong> Be descriptive: <code>Add thermal tolerance data for northern populations</code></li>
+            </ul>
+          </div>
+
+          <div style="background: #f6f5ef; padding: 1.5rem; border-radius: 6px; margin-bottom: 1.5rem;">
+            <h4 style="margin-top: 0;">Issues & Project Boards</h4>
+            <ul style="font-size: 0.95rem;">
+              <li>Use <strong>Issues</strong> to track bugs, feature requests, and analysis questions</li>
+              <li>Label issues: <code>bug</code>, <code>enhancement</code>, <code>analysis</code>, <code>priority</code></li>
+              <li>Use <strong>Project Boards</strong> to organize workflow (To Do → In Progress → Done)</li>
+              <li>Link PRs to issues: "Closes #42" in your PR description</li>
+            </ul>
+          </div>
+
+          <div style="background: #f6f5ef; padding: 1.5rem; border-radius: 6px;">
+            <h4 style="margin-top: 0;">Analysis Repository Structure</h4>
+            <p><strong>Example for a multi-species project:</strong></p>
+            <pre style="background: #fff; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.85rem;">analysis-repo/
+├── README.md (methods + results)
+├── species_A/
+│   ├── scripts/
+│   ├── outputs/
+│   └── README.md
+├── species_B/
+│   ├── scripts/
+│   ├── outputs/
+│   └── README.md
+└── shared_functions.R</pre>
+          </div>
+
+          <hr style="margin: 3rem 0;">
+
+          <h3>R Workflows</h3>
+          
+          <div style="background: #f6f5ef; padding: 1.5rem; border-radius: 6px; margin-bottom: 1.5rem;">
+            <h4 style="margin-top: 0;">Project Template</h4>
+            <p>Start each R project with this structure at the top of your script:</p>
+            <pre style="background: #fff; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.85rem;"># Analysis: [Brief description]
+# Author: [Your name]
+# Date: YYYY-MM-DD
+# Notes: [Any important details]
+
+# Load packages
+library(tidyverse)
+library(ggplot2)
+
+# Source functions
+source("scripts/shared_functions.R")
+
+# Set seed for reproducibility
+set.seed(12345)
+
+# Load data
+raw_data <- read.csv("data/raw/raw_data.csv")</pre>
+            <p style="margin-bottom: 0;"><a href="#">Download R project template</a> (coming soon)</p>
+          </div>
+
+          <div style="background: #f6f5ef; padding: 1.5rem; border-radius: 6px;">
+            <h4 style="margin-top: 0;">Plotting Standards & Figure Checklist</h4>
+            <p><strong>Before finalizing any figure, check:</strong></p>
+            <ul style="font-size: 0.95rem; margin-bottom: 0;">
+              <li>☐ Axes are labeled with units</li>
+              <li>☐ Legend is clear and positioned appropriately</li>
+              <li>☐ Color scheme is colorblind-friendly</li>
+              <li>☐ Font sizes are readable (especially in presentations)</li>
+              <li>☐ Error bars or confidence intervals are documented</li>
+              <li>☐ Figure caption is descriptive and complete</li>
+              <li>☐ Resolution is sufficient for publication (300+ dpi)</li>
+              <li>☐ Figure is saved in reproducible format (script + data)</li>
+            </ul>
+          </div>
+
+          <hr style="margin: 3rem 0;">
+
+          <h3>Field & Lab Documentation</h3>
+          
+          <div style="background: #f6f5ef; padding: 1.5rem; border-radius: 6px; margin-bottom: 1.5rem;">
+            <h4 style="margin-top: 0;">Field Datasheet Template Ideas</h4>
+            <ul style="font-size: 0.95rem;">
+              <li>Include header with date, location, observer, weather conditions</li>
+              <li>Pre-populate species/sample IDs where possible to reduce errors</li>
+              <li>Use consistent units and measurement protocols</li>
+              <li>Include space for qualitative notes (behavior, conditions, concerns)</li>
+              <li>Always collect: date, time, location (GPS if possible), observer initials</li>
+              <li>Make datasheets waterproof or digitize immediately in the field</li>
+            </ul>
+            <p style="margin-bottom: 0;"><a href="#">Download field datasheet template</a> (coming soon)</p>
+          </div>
+
+          <div style="background: #f6f5ef; padding: 1.5rem; border-radius: 6px;">
+            <h4 style="margin-top: 0;">Metadata Checklist</h4>
+            <p><strong>Every dataset should include metadata documenting:</strong></p>
+            <ul style="font-size: 0.95rem; margin-bottom: 0;">
+              <li>Data collection date(s) and location(s)</li>
+              <li>Who collected the data and who processed it</li>
+              <li>Collection protocol or methodology (methods paper reference)</li>
+              <li>All column names, units, and data types</li>
+              <li>Missing values and how they're coded</li>
+              <li>Any data quality issues or caveats</li>
+              <li>File version number and modification date</li>
+              <li>License and how the data can be used</li>
+            </ul>
+          </div>
+
+          <hr style="margin: 3rem 0;">
+
+          <p style="text-align: center; color: #666; font-size: 0.95rem;"><em>These guidelines are living documents. Feedback and contributions are welcome—<a href="contact.html">reach out</a>!</em></p>
+
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

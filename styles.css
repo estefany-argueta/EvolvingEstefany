@@ -926,8 +926,6 @@ details.project-details[open] summary {
 @media (max-width: 600px) {
   .project-gallery img { width: 100%; height: 160px; }
 }
-  color: #aaa;
-}
 #underfooter a:hover {
   color: #fff;
 }
