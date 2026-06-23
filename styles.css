@@ -294,7 +294,7 @@ a:hover {
 
 **********************************************************************/
 #head {
-  background: linear-gradient(rgba(10,16,22,0.35), rgba(10,16,22,0.15)), url("images/main/fdndoisirmaos.jpg") center/cover no-repeat, var(--bg);
+  background: linear-gradient(rgba(10,16,22,0.15), rgba(10,16,22,0.05)), url("images/main/fdndoisirmaos.jpg") center/cover no-repeat, var(--bg);
   color: var(--muted);
   height: 320px;
   padding: 40px 0 30px 0;
