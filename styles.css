@@ -828,7 +828,7 @@ footer.entry-meta .meta-in {
 #footer h3.widget-title {
   font-size: 15px;
   font-size: 0.9375rem;
-  text-transform: uppercase;
+  text-transform: none;
   color: #ccc;
   margin: 0 0 20px;
 }
