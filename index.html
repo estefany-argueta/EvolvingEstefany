@@ -19,8 +19,8 @@
 	<!-- Fonts loaded via styles.css (Inter + Merriweather) -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<!-- Custom styles -->
-	<link rel="stylesheet" href="styles.css">
+	<!-- Custom styles (cache-bust param to force reload after edits) -->
+	<link rel="stylesheet" href="styles.css?v=2">
 
 	<!-- [if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif] -->
 </head>
@@ -163,5 +163,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="assets/js/template.js"></script>
+
+<script>
+// Reload when the page is restored from back/forward cache (bfcache)
+window.addEventListener('pageshow', function (event) {
+  if (event.persisted) {
+    window.location.reload();
+  }
+});
+</script>
 </body>
 </html>
