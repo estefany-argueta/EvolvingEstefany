@@ -296,8 +296,8 @@ a:hover {
 #head {
   background: linear-gradient(rgba(10,16,22,0.15), rgba(10,16,22,0.05)), url("images/main/fdndoisirmaos.jpg") center/cover no-repeat, var(--bg);
   color: var(--muted);
-  height: 120px;
-  padding: 20px 0 15px 0;
+  height: 520px;
+  padding: 80px 0 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -333,7 +333,7 @@ a:hover {
   font-weight: normal;
 }
 #head .tagline a {
-  color: #ffffff;
+  color: #fffefe;
 }
 .home #head {
   padding: 90px 0;
@@ -947,7 +947,9 @@ p { text-transform: none !important; }
 
 /* Project titles (only) */
 h3.project-title {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: none;
   line-height: 1.25;
   margin-top: 0;
 }
