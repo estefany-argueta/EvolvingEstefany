@@ -16,4 +16,8 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
-Files added/updated: `index.html`, `publications.html`, `styles.css`, `404.html`, `favicon.svg`
+Live version
+```bash
+pm install -g live-server
+live-server --port=8000 .
+```
